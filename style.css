@@ -119,7 +119,9 @@ header li a:hover {
     color: #2B2A29;
     font-weight: bold;
 }
-
+ section {
+    margin-bottom: 2em;
+ }
 .slider {
     position: relative;
     height: 70vh;
@@ -411,6 +413,11 @@ figcaption.active {
     justify-content: center;
 }
 
+.projects__wrapper {
+    box-shadow: 0 .1em .2em #000;
+    z-index: 1000;
+}
+
 .projects {
     background-color: #EDECE8;
     padding: 2em 0;
@@ -551,4 +558,67 @@ figcaption.active {
     letter-spacing: 0.1rem;
     border-bottom: 2px solid #D2CCBF;
     padding-bottom: 0.5em;
+}
+
+.list {
+    background-color:#F4F3F1;
+    padding: 2em;
+}
+
+.list__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.list__inner li {
+    width: 50%;
+    flex-grow: 1;
+    padding: 1em;
+}
+
+@media screen and (min-width: 48em){
+    .list__inner {
+        padding: 0 3em;
+        flex-direction: row;
+    }
+    .list__inner li {
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 62em){
+    .list__inner {
+        padding: 0 8em;
+    }
+    .list__inner li {
+        width: auto;
+    }
+}
+
+footer {
+    background-color: #343433;
+    font-family: var(--text-font-style);
+    padding: 1em;
+}
+
+@media screen and (min-width: 48em) {
+    footer {
+        display: flex;
+        align-items: center;
+        gap: 3em;
+        padding: 1em 3em;
+    }
+    footer > div {
+        flex: 1;
+    }
+    footer > div + div {
+        text-align: center;
+    }
+}
+
+footer p {
+    color: #F4F3F1;
+    font-size: .8rem;
 }
